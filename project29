@@ -1,0 +1,7 @@
+def countSortAToTheB(n):
+    x=[]
+    for a in range(2,n+1):
+        for b in range(2,n+1):
+            x.append(a**b)
+            m=set(x)
+    print(len(m))
