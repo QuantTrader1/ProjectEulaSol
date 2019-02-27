@@ -1,0 +1,9 @@
+def power(n):
+    x=pow(n,n)
+    return(x)
+def power_sum(y):
+    c=[]
+    for y in range(1,y+1):
+        d=power(y)
+        c.append(d)
+    return(int(str(sum(c))[-10:]))
