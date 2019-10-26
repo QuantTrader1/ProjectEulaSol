@@ -1,0 +1,23 @@
+def factorial(n):
+    if n==1 or n==0:
+        v=1
+        return v
+    else:
+        v= n*factorial(n-1)
+        return v
+    
+def curiousNum(num):
+    s=[]
+    numSplit=[int(a) for a in str(num)]
+    for b in range(0,len(numSplit)):
+        s.append(factorial(numSplit[b]))
+    return(sum(s))
+
+def digitFact(x):
+    c=[]
+    for y in range(3,x):
+        if y ==curiousNum(y):
+            c.append(y)
+    print(sum(c))
+
+digitFact(100000)
