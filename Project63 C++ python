@@ -1,0 +1,45 @@
+//C++
+//  main.cpp
+//  projectEuler
+//
+//  Created by Moses Fola Dada  on 26/10/2019.
+//  Copyright © 2019 Moses Fola Dada . All rights reserved.
+//
+
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <vector>
+#include <list>
+
+using namespace std;
+
+int main(){
+    list<int> mylist;
+
+    for (int i=0; i<500;i++){
+        for(int a=0; a<500; a++){
+            unsigned long long int s = pow(a,i);
+            if(to_string(s).length()==i){
+                mylist.push_back(i);
+                
+                cout<<mylist.size()<<" "<< i<<endl;  
+            }
+
+        }        
+    }
+
+    return 0;
+}
+
+//Python
+j=[]
+for i in range(0,500):
+    for a in range(1,500):
+        s=(pow(a,i))
+        if len(str(s))==i:
+            j.append(i)
+print("Number is: ",len(j))
+
+
+    
