@@ -1,0 +1,22 @@
+import time
+
+t0 = time.time()
+n_0=40755+1
+n=100000
+T,P,H=[],[],[]
+
+for i in range(0,n):
+    T.append((i*(i+1))/2)  
+        
+for i in range(0,n):
+    P.append((i*(3*i-1))/2)
+
+for i in range(0,n):
+    H.append(i*(2*i-1))
+
+
+PH=set(P).intersection(set(H))        
+print(PH.intersection(set(T)))
+t1 = time.time()
+total = t1-t0
+total   
