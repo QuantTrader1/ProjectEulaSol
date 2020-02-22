@@ -1,0 +1,9 @@
+namesSorted=list(sorted(names))
+nSorted=[namesSorted.lower() for namesSorted in namesSorted]
+def numberSum(i):
+    numbers = [ord(letter) - 96 for letter in i]
+    return sum(numbers)
+L=[]
+for i in nSorted:
+    L.append(numberSum(i)*(nSorted.index(i)+1))
+print(sum(L))
